@@ -14,7 +14,7 @@ export const Movie=()=>{
     return(
         <>
         <h1 className="text-3xl text-red-700 font-bold text-center">Movie</h1>
-          <ul className="grid grid-cols-4 gap-4 p-4 overflow-y-scroll max-h-[80vh] ">
+          <ul className="grid xl:grid-cols-4 gap-4 md:grid-cols-3 sm:grid-cols-2 p-4 overflow-y-scroll max-h-[80vh] ">
          {result}
          </ul>
         </>

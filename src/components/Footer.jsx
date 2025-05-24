@@ -39,12 +39,29 @@
 //     );
 // };
 
+import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white text-xl py-10 relative bottom-0">
-      <section className="max-w-6xl mx-auto grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4  text-center">
-        <section>
+    <footer className="bg-gray-800 text-white text-xl py-5 relative bottom-0">
+      <section className="max-w-6xl mx-auto grid grid-cols-2  sm:grid-cols-2 md:grid-cols-4  text-center">
+      <NavLink to="/">
+      Home
+      </NavLink>
+
+         <NavLink to="/about">
+      About
+      </NavLink>
+
+         <NavLink to="/movie">
+      Movie
+      </NavLink>
+
+        <NavLink to="/contact">
+      Contact
+      </NavLink>
+      
+        {/* <section>
             <h1>Contact</h1>
         </section>
          <section>
@@ -53,9 +70,7 @@ export const Footer = () => {
          <section>
             <h1>Contact</h1>
         </section>
-         <section>
-            <h1>Contact</h1>
-        </section>  
+         */}
       </section>
     </footer>
   );

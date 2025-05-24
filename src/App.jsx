@@ -6,6 +6,9 @@ import {Movie} from "./pages/Movie";
 import Applayout from "./components/Applayout";
 import { ErrorPage } from "./pages/ErrorPage";
 import { GetMoviesData } from "./api/GetApi";
+import { MovieDetails } from "./components/UI/MovieDetails";
+import { GetMoviesDetails } from "./api/GetMovieDetails";
+import { ContactFormData } from "./pages/Contact";
 const App=()=>{
   const router=createBrowserRouter([
      //makes the list of routes (URL to component map).
@@ -29,8 +32,15 @@ const App=()=>{
           loader:GetMoviesData,
         },
          {
+          path:"/movie/:movieID",
+          //aaba ya ko movieid chai react ko context ma store hunxa so child component ley use garna pauxa.
+          element:<MovieDetails/>,
+          loader:GetMoviesDetails,
+        },
+         {
           path:"/contact",
           element:<Contact/>,
+          action:ContactFormData,
         },
       ],
     },

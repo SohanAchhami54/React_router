@@ -11,7 +11,7 @@ const Applayout=()=>{
    
 
     return(
-        <div className="flex flex-col min-h-screen">
+         <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
         <Outlet />
@@ -19,6 +19,14 @@ const Applayout=()=>{
       <Footer />
     </div>
     );
+    //     <div className="flex flex-col min-h-screen">
+    //   <Header />
+    //   <main className="flex-grow">
+    //     <Outlet />
+    //   </main>
+    //   <Footer />
+    // </div>
+    // );
 };
 export default Applayout;
 //this is parent container.
